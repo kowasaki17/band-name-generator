@@ -1,11 +1,15 @@
 function generateBandName(clothingColour, lastFoodEaten){
 
-    clothingColour = clothingColour.charAt(0).toUpperCase() + clothingColour.slice(1);
-    lastFoodEaten = lastFoodEaten.charAt(0).toUpperCase() + lastFoodEaten.slice(1);
-    
+  let clothingColorFirst = clothingColour.charAt(0).toUpperCase();
+  let clothingColorRest =  clothingColour.substr(1).toLowerCase();
+  let lastFoodEatenFirst = lastFoodEaten.charAt(0).toUpperCase();
+  let lastFoodEatenRest = lastFoodEaten.substr(1).toLowerCase();
 
-    return `The ${clothingColour} ${lastFoodEaten}`;
+    return `The ${clothingColorFirst}${clothingColorRest} ${lastFoodEatenFirst}${lastFoodEatenRest}`;
 
 }
+let bandName = generateBandName('black', 'spaghetti');
+let arrBandName = [bandName];
 
+console.log(arrBandName);
 console.log(generateBandName('black', 'spaghetti'));
