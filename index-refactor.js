@@ -12,4 +12,4 @@ let bandName = generateBandName('black', 'spaghetti');
 let arrBandName = [bandName];
 
 console.log(arrBandName);
-console.log(generateBandName('black', 'spaghetti'));
+console.log(bandName);
