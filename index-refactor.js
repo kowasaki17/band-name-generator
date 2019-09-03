@@ -1,28 +1,22 @@
-const arrBandNames = [];
+let arrBandNames = [];
 
-function generateClothingColor(clothingColour){
+function generateBandName(clothingColour, lastFoodEaten){
+ 
+  const color = function() { 
+    return (clothingColour.charAt(0).toUpperCase() + clothingColour.substr(1).toLowerCase()
+    );
+  };
 
-  let clothingColorFirst = clothingColour.charAt(0).toUpperCase();
-  let clothingColorRest = clothingColour.substr(1).toLowerCase();
+  const food = function() { 
+    return (lastFoodEaten.charAt(0).toUpperCase() + lastFoodEaten.substr(1).toLowerCase()
+    );
+  };
 
-  let color = `${clothingColorFirst}${clothingColorRest}`;
+  let bandName = `The ${color()} ${food()}`;
 
-    return color;
+  arrBandNames = [color(), food()];
 
+  return bandName;
 }
-function generateFoodName(lastFoodEaten){
 
-  let lastFoodEatenFirst = lastFoodEaten.charAt(0).toUpperCase();
-  let lastFoodEatenRest = lastFoodEaten.substr(1).toLowerCase();
-
-  let food = `${lastFoodEatenFirst}${lastFoodEatenRest}`;
-
-  return food;
-}
-
-//let bandName = `The ${color} ${food}`;
-//arrBandNames.push(bandName);
-//console.log(arrBandNames);
-
-console.log(generateClothingColor('green'));
-console.log(generateFoodName('sausage'));
+console.log(generateBandName('green', 'sandwich'));
