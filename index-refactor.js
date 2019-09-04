@@ -1,22 +1,23 @@
 let arrBandNames = [];
 
-function generateBandName(clothingColour, lastFoodEaten){
- 
-  const color = function() { 
+function generateName(clothingColour){
+  return (clothingColour.charAt(0).toUpperCase() + clothingColour.substr(1).toLowerCase())
+
+/*    let color = function() { 
     return (clothingColour.charAt(0).toUpperCase() + clothingColour.substr(1).toLowerCase()
     );
-  };
+  }; 
 
-  const food = function() { 
+   const food = function() { 
     return (lastFoodEaten.charAt(0).toUpperCase() + lastFoodEaten.substr(1).toLowerCase()
     );
-  };
+  }; 
 
   let bandName = `The ${color()} ${food()}`;
 
-  arrBandNames = [color(), food()];
+  arrBandNames = [color(), food()]; 
 
-  return bandName;
+  return color; */
 }
 
-console.log(generateBandName('green', 'sandwich'));
+console.log(generateName('grEEn') + ' ' + generateName('sAnDwich'));
